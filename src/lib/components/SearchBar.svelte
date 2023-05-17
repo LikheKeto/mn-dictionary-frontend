@@ -3,6 +3,7 @@
 	import { slide } from 'svelte/transition';
 	import { _ } from 'svelte-i18n';
 	import { alerts } from '$lib/alerts';
+	import { SERVER_URL } from '$lib';
 
 	const N_PROBABLE_WORDS = 5;
 
@@ -46,7 +47,7 @@
 	});
 
 	const searchHandler = async () => {
-		const res = await fetch('http://localhost:8080/search?word=' + searchTerm);
+		const res = await fetch(SERVER_URL + '/search?word=' + searchTerm);
 		const parsedRes = await res.json();
 		if (!parsedRes.error) {
 			results = parsedRes;
