@@ -63,7 +63,7 @@
 			return;
 		}
 		const res = await fetch(
-			`http://inputtools.google.com/request?text=${searchTerm}&itc=ne-t-i0-und&num=${N_PROBABLE_WORDS}&cp=0&cs=1&ie=utf-8`
+			`https://inputtools.google.com/request?text=${searchTerm}&itc=ne-t-i0-und&num=${N_PROBABLE_WORDS}&cp=0&cs=1&ie=utf-8`
 		);
 		const parsedRes = await res.json();
 		if (parsedRes?.length > 0 && parsedRes[0] === 'SUCCESS' && parsedRes[1].length > 0) {
