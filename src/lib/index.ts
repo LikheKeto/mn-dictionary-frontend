@@ -1,1 +1,1 @@
-export const SERVER_URL = 'https://ma-dictionary-backend.onrender.com';
+export const SERVER_URL = 'https://dictionary.parajulijivan.com.np/';
